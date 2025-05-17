@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais Pedágios, Não!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            max-width: 300px;
+            height: auto;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+            padding: 10px 0;
+        }
+        .nav-button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #c0392b;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .content-section {
+            display: none;
+            padding: 20px;
+        }
+        .active {
+            display: block;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #e74c3c;
+        }
+        .download-link {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .download-link:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo_final.png" alt="Mais Pedágios, Não!" class="logo">
+        </div>
+        <h1>MAIS PEDÁGIOS, NÃO!</h1>
+    </header>
+    
+    <nav>
+        <button class="nav-button" onclick="showSection('quem-somos')">Quem Somos</button>
+        <button class="nav-button" onclick="showSection('abaixo-assinado')">Baixar Abaixo-Assinado</button>
+        <button class="nav-button" onclick="showSection('referendo')">Razões do Referendo</button>
+    </nav>
+    
+    <main>
+        <section id="quem-somos" class="content-section active">
+            <h2>Frente Parlamentar e Popular "Mais Pedágios, Não!"</h2>
+            <h3>Apresentação</h3>
+            <p>A <strong>Frente Parlamentar e Popular "Mais Pedágios, Não!"</strong> surge como uma resposta organizada e firme contra a proposta de ampliação das praças de pedágio no Estado de São Paulo. Reunimos parlamentares, lideranças comunitárias, movimentos sociais, sindicatos, associações e cidadãos comprometidos com a defesa do direito à mobilidade acessível, coletiva, sustentável e à proteção da economia paulista.</p>
+            
+            <p>Nosso movimento é suprapartidário, plural e construído com a participação direta da sociedade civil. Entendemos que os pedágios existentes em São Paulo já figuram entre os mais caros do país e que novas cobranças apenas agravarão o custo de vida dos trabalhadores, impactarão a produção agrícola e industrial, e encarecerão ainda mais o transporte de mercadorias e serviços para a população.</p>
+            
+            <h3>Objetivo</h3>
+            <p>A Frente tem como objetivos <strong>unir forças para impedir a instalação de novos pedágios nas estradas paulistas</strong>, <strong>combater abusos tarifários</strong> e <strong>defender a transparência na gestão das concessões rodoviárias</strong> e o incentivo ao transporte público reconhecidamente mais sustentável, garantindo o direito de ir e vir de todos os cidadãos.</p>
+            
+            <h3>Justificativa</h3>
+            <p>Atualmente, a população já enfrenta tarifas de pedágio excessivas, que se refletem em prejuízos diretos no bolso do trabalhador e nas cadeias produtivas do Estado. A criação de novas praças (sejam físicas ou tecnológicas), sem a devida justificativa técnica, sem interesse público e sem melhorias significativas nas rodovias, representam mais peso sobre quem precisa se deslocar para trabalhar, estudar ou produzir.</p>
+            
+            <p>A política de pedagjamento excessivo restringe o acesso às estradas e encarece a vida no campo e na cidade. Lutar contra novos pedágios é, portanto, lutar por uma mobilidade mais justa, pela competitividade da economia e pela preservação do direito de ir e vir.</p>
+            
+            <p>Essa política de rodoviarismo em que se extrai espaço físico das pessoas, recursos da sociedade em prol dos veículos e concessionárias não funcionou em país nenhum, e a Frente "Mais pedágios, NÃO" vem exigir um basta nisso e requerer que o Governo olhe para as pessoas e cidades do Estado não como clientes ou como usuários pagantes de tarifas, mas como cidadãos e comunidades.</p>
+        </section>
+        
+        <section id="abaixo-assinado" class="content-section">
+            <h2>Baixar Abaixo-Assinado para Referendo</h2>
+            <p>Clique no link abaixo para baixar o documento do abaixo-assinado para solicitar o referendo sobre os pedágios em São Paulo:</p>
+            <a href="abaixo_assinado_referendo.pdf" class="download-link" download>Baixar Abaixo-Assinado</a>
+        </section>
+        
+        <section id="referendo" class="content-section">
+            <h2>Razões do Referendo</h2>
+            <h3>Exposição de Motivos – Referendo sobre Pedágios e Concessões das Estradas Paulistas</h3>
+            
+            <p>Excelentíssimos Senhores Deputados da Assembleia Legislativa do Estado de São Paulo,</p>
+            
+            <p>O presente requerimento de referendo é motivado pela necessidade urgente de consulta popular direta sobre a política de concessões rodoviárias e cobrança de pedágios nas estradas estaduais paulistas.</p>
+            
+            <p>Essa política de concessões das vias - agora de modo amplo - com o novo modelo "Free-flow" acarreta diversos males à sociedade, como por exemplos:</p>
+            
+            <ul>
+                <li>Inibe o direito constitucional de ir e vir dentro da propria cidade</li>
+                <li>Encarece o trânsito dos trabalhadores para ir e vir do local de trabalho.</li>
+                <li>Encarece os produtos produzidos e comercializados que necessariamente utilizam-se das vias para o transporte.</li>
+                <li>Encarece a busca de formação dos estudantes, principalmente universitários nas cidades do interior que buscam o diploma nas cidades maiores vizinhas.</li>
+                <li>Aumenta o custo da procura por atendimento à saúde, visto que diversos procedimentos não são realizados nas próprias cidades do interior, e utilizam-se as vias entre cidades, dada a ausência dos procedimentos medicos nas pequenas e médias urbes.</li>
+                <li>Dificulta o desenvolvimento das pequenas cidades com mais um custo para atrair investimentos e escoar sua produção, ou desenvolvimento da atividade turística.</li>
+            </ul>
+            
+            <h3>Indagação</h3>
+            <p>A pergunta que será submetida à população no referendo é:</p>
+            <blockquote>
+                <p><strong>"Você é a favor da cobrança de pedágios e concessões das estradas paulistas?"</strong></p>
+            </blockquote>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Frente Parlamentar e Popular "Mais Pedágios, Não!"</p>
+        <p>Contato: [inserir e-mail] | [inserir redes sociais]</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Esconde todas as seções
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Mostra a seção selecionada
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
