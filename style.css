@@ -1,0 +1,378 @@
+/* ===== Estilo global da página ===== */
+body {
+  margin: 0; /* Remove margens padrão do navegador */
+  background: white; /* Fundo branco para o site */
+  font-family: Arial, sans-serif; /* Define fonte padrão */
+  padding-top: 0; /* Remove padding superior (vai ser controlado via media query) */
+}
+
+/* ===== Cabeçalho da página ===== */
+.cabecalho {
+  display: flex; /* Layout flexível horizontal */
+  align-items: center; /* Alinha itens verticalmente */
+  justify-content: center; /* Centraliza o conteúdo */
+  background-color: #ffffff; /* Fundo branco */
+  padding: 20px 20px 10px 20px; /* Espaçamento interno */
+  position: relative; /* Para posicionar itens filhos absolutamente */
+  flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+  box-shadow: none; /* Sem sombra por padrão */
+  z-index: 1000; /* Fica acima de outros elementos */
+  height: 100px; /* Altura fixa */
+}
+
+/* ===== Logo da página ===== */
+.logo {
+  height: 100px; /* Altura da logo */
+  width: auto; /* Largura ajusta automaticamente */
+  position: absolute; /* Posiciona absolutamente no cabeçalho */
+  left: 12vw; /* Distância da esquerda */
+  top: 50%; /* Alinhado verticalmente ao meio */
+  transform: translateY(-50%); /* Ajusta para o centro vertical */
+  flex-shrink: 0; /* Impede redimensionamento da logo */
+  transition: all 0.3s ease; /* Animações suaves */
+}
+
+/* ===== Botão de download ===== */
+.botao-download {
+  background: #28a745; /* Verde */
+  border: 2px solid #1e7e34; /* Borda mais escura */
+  color: white; /* Texto branco */
+  font-size: 1rem; /* Tamanho da fonte */
+  padding: 1.25rem 4rem; /* Espaçamento interno */
+  cursor: pointer; /* Muda o cursor ao passar */
+  display: flex; /* Alinha ícone e texto */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Centraliza o conteúdo */
+  gap: 10px; /* Espaço entre ícone e texto */
+  text-decoration: none; /* Remove sublinhado */
+  border-radius: 0; /* Sem borda arredondada */
+  transition: background-color 0.3s, border-color 0.3s; /* Transições suaves */
+  max-width: 90%; /* Limita largura máxima */
+  box-sizing: border-box; /* Inclui padding e borda na largura */
+  text-align: center; /* Centraliza o texto */
+  word-break: break-word; /* Quebra palavras grandes */
+  white-space: normal; /* Permite múltiplas linhas */
+  position: relative; /* Permite z-index */
+  z-index: 1001; /* Fica acima de outros elementos */
+  min-height: 48px; /* Altura mínima acessível */
+}
+
+.icon {
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
+  fill: white; /* Cor do ícone */
+  flex-shrink: 0;
+  transition: all 0.3s ease; /* Animação suave */
+}
+
+.botao-download:hover,
+.botao-download:focus {
+  background-color: #dc3545; /* Vermelho ao passar o mouse */
+  border-color: #bd2130; /* Borda vermelha escura */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.5); /* Destaque acessível */
+}
+
+.botao-download:active {
+  background-color: #bd2130; /* Vermelho escuro ao clicar */
+  border-color: #a71d2a;
+}
+
+/* ===== Navegação entre seções ===== */
+.navegacao-secoes {
+  display: flex; /* Layout flexível */
+  justify-content: center; /* Centraliza conteúdo */
+  align-items: center;
+  gap: 20px; /* Espaço entre botões */
+  padding: 10px 20px;
+  background-color: #050505; /* Faixa preta */
+  flex-wrap: wrap;
+  margin-top: 20px;
+  position: relative;
+  z-index: 999; /* Fica acima do conteúdo */
+  height: 60px; /* Altura da faixa */
+}
+
+.botao-navegacao {
+  background: none;
+  border: none;
+  color: white;
+  padding: 0;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.rodape {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #666;
+  background-color: #f9f9f9;
+  margin-top: 60px;
+}
+
+.rodape a {
+  color: #28a745; /* Verde suave */
+  text-decoration: none;
+}
+
+.rodape a:hover {
+  text-decoration: underline;
+}
+
+.botao-navegacao:hover {
+  color: #28a745; /* Fica verde ao passar */
+  text-decoration: underline;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5); /* Acessibilidade */
+}
+
+/* ===== Responsividade: telas menores que 600px ===== */
+@media (max-width: 600px) {
+  .cabecalho {
+    position: static !important; /* Impede fixação no topo */
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .logo {
+    position: static !important;
+    transform: none !important;
+    height: 80px; /* Reduz tamanho em telas pequenas */
+    margin-bottom: 15px;
+  }
+
+  .botao-download {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem 1rem;
+    font-size: 0.95rem;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .navegacao-secoes {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: auto;
+    background-color: #050505;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+  }
+
+  body {
+    padding-top: 0 !important;
+  }
+
+  .secao {
+    scroll-margin-top: 0 !important;
+  }
+}
+
+/* ===== Telas maiores que 600px: cabeçalho fixo ===== */
+@media (min-width: 601px) {
+  .cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  .logo {
+    position: absolute;
+  }
+
+  .botao-download {
+    position: relative;
+    z-index: 1001;
+  }
+
+  .navegacao-secoes {
+    position: fixed;
+    top: 100px; /* Abaixo do cabeçalho */
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  body {
+    padding-top: 160px; /* Compensa cabeçalho + navegação */
+  }
+
+  .secao {
+    scroll-margin-top: 160px; /* Para ancoragem correta */
+  }
+}
+
+/* ===== Seções ===== */
+.secao {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 60px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.secao h2 {
+  color: #28a745;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  transition: color 0.4s ease;
+}
+
+.secao p {
+  font-size: 1.0rem;
+  line-height: 1.3;
+  color: #333;
+  transition: color 0.4s ease;
+}
+
+.secao:hover {
+  background-color: #e6f4ea; /* Destaque ao passar o mouse */
+}
+
+/* ===== Menu Hamburguer ===== */
+.menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #28a745;
+  cursor: pointer;
+  z-index: 1002;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+/* ===== Menu Mobile ===== */
+.menu-mobile {
+  display: none;
+  flex-direction: column;
+  background-color: #050505;
+  position: fixed;
+  top: 243px;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+  padding: 0;
+}
+
+.menu-mobile.ativo {
+  display: flex;
+}
+
+.menu-mobile .botao-navegacao {
+  padding: 12px 5px 12px 10px;
+  text-align: right;
+  width: auto;
+  max-width: 90%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #333;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navegacao-secoes {
+    display: none !important;
+  }
+}
+
+@media (min-width: 601px) {
+  .menu-toggle {
+    display: none !important;
+  }
+
+  .menu-mobile {
+    display: none !important;
+  }
+}
+
+/* ===== Área de contatos no canto superior direito ===== */
+.contato-topo {
+  position: absolute;         /* Fixa no topo da página */
+  top: 50px;                  /* Distância do topo */
+  right: 130px;               /* Distância da borda direita */
+  display: flex;              /* Flexbox para alinhar os ícones */
+  flex-direction: row;        /* Ícones lado a lado na horizontal */
+  align-items: flex-start;    /* Alinha itens no topo, pois o texto ficará abaixo do ícone */
+  gap: 80px;                 /* Espaçamento entre os blocos de ícones+texto */
+  z-index: 1100;              /* Sobrepõe outros elementos */
+}
+
+/* Cada link (ícone + texto) */
+.contato-topo a {
+  display: flex;              /* Flexbox para alinhar ícone e texto */
+  flex-direction: column;     /* Ícone em cima, texto embaixo */
+  align-items: center;        /* Centraliza ícone e texto horizontalmente */
+  text-decoration: none;      /* Remove sublinhado dos links */
+  color: #333333;             /* Cor padrão do texto */
+  font-size: 0.85rem;         /* Tamanho da fonte do texto */
+  font-weight: 600;           /* Deixa o texto um pouco mais negrito */
+  cursor: pointer;            /* Cursor de link */
+  user-select: none;          /* Evita seleção do texto ao clicar */
+}
+
+/* Estilo para os ícones */
+.icone-contato {
+  width: 24px;                /* Largura fixa dos ícones */
+  height: 24px;               /* Altura fixa dos ícones */
+  transition: transform 0.3s; /* Animação suave para o hover */
+}
+
+/* Animação ao passar o mouse sobre o link */
+.contato-topo a:hover .icone-contato {
+  transform: scale(1.15);     /* Aumenta o ícone levemente */
+}
+
+/* Estilo para o texto que fica abaixo do ícone */
+.contato-topo a span {
+  margin-top: 6px;            /* Espaço entre ícone e texto */
+  color: #333333;             /* Cor do texto */
+  transition: color 0.3s;     /* Transição suave para a cor */
+}
+
+/* Muda a cor do texto ao passar o mouse no link */
+.contato-topo a:hover span {
+  color: #28a745;             /* Verde no hover */
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 600px) {
+  .contato-topo {
+    position: static;         /* Remove posicionamento absoluto */
+    justify-content: center;  /* Centraliza horizontalmente */
+    gap: 40px;                /* Espaçamento menor entre os blocos */
+    margin-bottom: 15px;      /* Espaço abaixo da área */
+  }
+
+  .icone-contato {
+    width: 20px;              /* Ícones menores */
+    height: 20px;
+  }
+
+  .contato-topo a {
+    font-size: 0.8rem;        /* Fonte menor em telas pequenas */
+  }
+}
